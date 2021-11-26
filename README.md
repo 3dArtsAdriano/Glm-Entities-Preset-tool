@@ -3,8 +3,14 @@
 Introduction
 ----------
 
-This is a pure python's tool to improves functionality and optimize some processes related to Autodesk Maya and the famous crowds simulation plugin Golaem. 
-Glm Entities Preset tool enable user to store entities data into preset file and reload on different cacheproxy node . 
+This is a pure python's tool to improves functionality and optimize some processes related to Autodesk Maya's plugin for crowds simulation Golaem. 
+Glm Entities Preset tool enable user to store entities data into preset file and reload on different cacheproxy node .
+
+Features:
+
+* store cache Proxy entity data as Xml format
+* load entity data on selected entity by automate Layout's node creation with all data needed and connection. 
+
 
 Install
 -------
