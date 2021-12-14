@@ -22,7 +22,7 @@ Preset Data structure:
 * Shading Group (string[])
 * Shaders Attributes (string[])
 * Blindata (string[])
-* WorldPosition (float[]) 
+* TODO: WorldPosition (float[]) 
 
 
 
