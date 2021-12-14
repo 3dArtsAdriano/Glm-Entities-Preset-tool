@@ -1,16 +1,11 @@
-'''Copyright (C) 2021  Adriano Sanna
+# -*- coding: utf-8 -*-
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-Golaem and Golaem trademark are property of Golaem S.A.'''
+# Form implementation generated from reading ui file 'C:/Users/sanna/PycharmProjects/Glm-Entities-Preset-tool/asGep.ui'
+#
+# Created: Tue Dec 14 14:21:40 2021
+#      by: pyside2-uic  running on PySide2 2.0.0~alpha0
+#
+# WARNING! All changes made in this file will be lost!
 
 from PySide2 import QtCore, QtGui, QtWidgets
 
@@ -113,7 +108,7 @@ class Ui_MainWindow(object):
         self.refreshButton = QtWidgets.QPushButton(self.saveTab)
         self.refreshButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icons/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("../../Documents/maya/2019/scripts/as_glmEntityPreset/icons/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.refreshButton.setIcon(icon)
         self.refreshButton.setIconSize(QtCore.QSize(32, 32))
         self.refreshButton.setObjectName("refreshButton")
@@ -121,7 +116,7 @@ class Ui_MainWindow(object):
         self.saveButton = QtWidgets.QPushButton(self.saveTab)
         self.saveButton.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("icons/saveAs.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../../Documents/maya/2019/scripts/as_glmEntityPreset/icons/saveAs.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.saveButton.setIcon(icon1)
         self.saveButton.setIconSize(QtCore.QSize(32, 32))
         self.saveButton.setObjectName("saveButton")
@@ -149,6 +144,7 @@ class Ui_MainWindow(object):
         self.meshesCheckBox.setObjectName("meshesCheckBox")
         self.gridLayout_6.addWidget(self.meshesCheckBox, 0, 1, 1, 1)
         self.blindDataCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
+        self.blindDataCheckBox.setEnabled(False)
         self.blindDataCheckBox.setText("")
         self.blindDataCheckBox.setChecked(True)
         self.blindDataCheckBox.setObjectName("blindDataCheckBox")
@@ -156,11 +152,13 @@ class Ui_MainWindow(object):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_6.addItem(spacerItem2, 0, 0, 1, 1)
         self.shadingGroupCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
+        self.shadingGroupCheckBox.setEnabled(False)
         self.shadingGroupCheckBox.setText("")
         self.shadingGroupCheckBox.setChecked(True)
         self.shadingGroupCheckBox.setObjectName("shadingGroupCheckBox")
         self.gridLayout_6.addWidget(self.shadingGroupCheckBox, 1, 1, 1, 1)
         self.shaderAttrCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
+        self.shaderAttrCheckBox.setEnabled(True)
         self.shaderAttrCheckBox.setText("")
         self.shaderAttrCheckBox.setChecked(True)
         self.shaderAttrCheckBox.setObjectName("shaderAttrCheckBox")
@@ -182,7 +180,7 @@ class Ui_MainWindow(object):
         self.loadPresetFolderButton = QtWidgets.QPushButton(self.loadFilesGroupBox)
         self.loadPresetFolderButton.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("icons/open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("../../Documents/maya/2019/scripts/as_glmEntityPreset/icons/open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.loadPresetFolderButton.setIcon(icon2)
         self.loadPresetFolderButton.setIconSize(QtCore.QSize(32, 32))
         self.loadPresetFolderButton.setObjectName("loadPresetFolderButton")
@@ -253,6 +251,7 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.verticalLayout_2.addWidget(self.label_6)
         self.selectedShadingGroupListWidget = QtWidgets.QListWidget(self.selectedDataGroupBox)
+        self.selectedShadingGroupListWidget.setEnabled(False)
         self.selectedShadingGroupListWidget.setObjectName("selectedShadingGroupListWidget")
         self.verticalLayout_2.addWidget(self.selectedShadingGroupListWidget)
         self.label_8 = QtWidgets.QLabel(self.selectedDataGroupBox)
@@ -265,6 +264,7 @@ class Ui_MainWindow(object):
         self.label_10.setObjectName("label_10")
         self.verticalLayout_2.addWidget(self.label_10)
         self.selectedBlindDataListWidget = QtWidgets.QListWidget(self.selectedDataGroupBox)
+        self.selectedBlindDataListWidget.setEnabled(False)
         self.selectedBlindDataListWidget.setObjectName("selectedBlindDataListWidget")
         self.verticalLayout_2.addWidget(self.selectedBlindDataListWidget)
         self.gridLayout_2.addWidget(self.selectedDataGroupBox, 1, 2, 1, 1)
@@ -276,24 +276,33 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.verticalLayout.addWidget(self.label_3)
         self.xmlMeshesListWidget = QtWidgets.QListWidget(self.importedDataGroupBox)
+        self.xmlMeshesListWidget.setLineWidth(1)
+        self.xmlMeshesListWidget.setAlternatingRowColors(False)
+        self.xmlMeshesListWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.xmlMeshesListWidget.setObjectName("xmlMeshesListWidget")
         self.verticalLayout.addWidget(self.xmlMeshesListWidget)
         self.label_5 = QtWidgets.QLabel(self.importedDataGroupBox)
         self.label_5.setObjectName("label_5")
         self.verticalLayout.addWidget(self.label_5)
         self.xmlShadingGroupsListWidget = QtWidgets.QListWidget(self.importedDataGroupBox)
+        self.xmlShadingGroupsListWidget.setEnabled(False)
+        self.xmlShadingGroupsListWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.xmlShadingGroupsListWidget.setObjectName("xmlShadingGroupsListWidget")
         self.verticalLayout.addWidget(self.xmlShadingGroupsListWidget)
         self.label_7 = QtWidgets.QLabel(self.importedDataGroupBox)
         self.label_7.setObjectName("label_7")
         self.verticalLayout.addWidget(self.label_7)
         self.xmlShaderAttrListWidget = QtWidgets.QListWidget(self.importedDataGroupBox)
+        self.xmlShaderAttrListWidget.setEnabled(True)
+        self.xmlShaderAttrListWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.xmlShaderAttrListWidget.setObjectName("xmlShaderAttrListWidget")
         self.verticalLayout.addWidget(self.xmlShaderAttrListWidget)
         self.label_9 = QtWidgets.QLabel(self.importedDataGroupBox)
         self.label_9.setObjectName("label_9")
         self.verticalLayout.addWidget(self.label_9)
         self.xmlBlindDataListWidget = QtWidgets.QListWidget(self.importedDataGroupBox)
+        self.xmlBlindDataListWidget.setEnabled(False)
+        self.xmlBlindDataListWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.xmlBlindDataListWidget.setObjectName("xmlBlindDataListWidget")
         self.verticalLayout.addWidget(self.xmlBlindDataListWidget)
         self.gridLayout_2.addWidget(self.importedDataGroupBox, 1, 0, 1, 1)
@@ -303,7 +312,7 @@ class Ui_MainWindow(object):
         self.importToLayoutButton.setToolTip("")
         self.importToLayoutButton.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("icons/import.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("../../Documents/maya/2019/scripts/as_glmEntityPreset/icons/import.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.importToLayoutButton.setIcon(icon3)
         self.importToLayoutButton.setIconSize(QtCore.QSize(32, 32))
         self.importToLayoutButton.setObjectName("importToLayoutButton")
