@@ -1,0 +1,13 @@
+/*
+Drag and drop for Maya 2016+
+*/
+
+global proc asGep() {
+    string $whatIs = `whatIs asGep`;
+    string $path = `substring $whatIs 25 999`;
+    print(">>>>"+$path);
+    string $filename = `substitute "install.mel" $path "install.py"`;;
+    python("import imp;imp.load_source('_asGep', '"+$filename+"')");
+}
+
+asGep();
