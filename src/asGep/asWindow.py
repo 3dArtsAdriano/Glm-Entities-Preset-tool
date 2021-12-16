@@ -1,16 +1,24 @@
-# -*- coding: utf-8 -*-
+'''Copyright (C) 2021  Adriano Sanna
 
-# Form implementation generated from reading ui file 'C:/Users/sanna/PycharmProjects/Glm-Entities-Preset-tool/asGep.ui'
-#
-# Created: Tue Dec 14 14:21:40 2021
-#      by: pyside2-uic  running on PySide2 2.0.0~alpha0
-#
-# WARNING! All changes made in this file will be lost!
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+Golaem and Golaem trademark are property of Golaem S.A.'''
 
 from PySide2 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        # --------------------------------------------------------------------
+        # WINDOW
+        # --------------------------------------------------------------------
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(564, 833)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -25,6 +33,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.saveTab.sizePolicy().hasHeightForWidth())
+        # --------------------------------------------------------------------
+        # SAVE TAB
+        # --------------------------------------------------------------------
         self.saveTab.setSizePolicy(sizePolicy)
         self.saveTab.setObjectName("saveTab")
         self.gridLayout = QtWidgets.QGridLayout(self.saveTab)
@@ -129,6 +140,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.loadTab.sizePolicy().hasHeightForWidth())
         self.loadTab.setSizePolicy(sizePolicy)
+        #--------------------------------------------------------------------
+        #LOAD TAB
+        #--------------------------------------------------------------------
         self.loadTab.setObjectName("loadTab")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.loadTab)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -146,7 +160,7 @@ class Ui_MainWindow(object):
         self.blindDataCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
         self.blindDataCheckBox.setEnabled(False)
         self.blindDataCheckBox.setText("")
-        self.blindDataCheckBox.setChecked(True)
+        self.blindDataCheckBox.setChecked(False)
         self.blindDataCheckBox.setObjectName("blindDataCheckBox")
         self.gridLayout_6.addWidget(self.blindDataCheckBox, 3, 1, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -154,7 +168,7 @@ class Ui_MainWindow(object):
         self.shadingGroupCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
         self.shadingGroupCheckBox.setEnabled(False)
         self.shadingGroupCheckBox.setText("")
-        self.shadingGroupCheckBox.setChecked(True)
+        self.shadingGroupCheckBox.setChecked(False)
         self.shadingGroupCheckBox.setObjectName("shadingGroupCheckBox")
         self.gridLayout_6.addWidget(self.shadingGroupCheckBox, 1, 1, 1, 1)
         self.shaderAttrCheckBox = QtWidgets.QCheckBox(self.importFlagsGroupBox)
@@ -332,6 +346,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(1)
+        # --------------------------------------------------------------------
+        # UI CONNECTIONS
+        # --------------------------------------------------------------------
         QtCore.QObject.connect(self.meshesCheckBox, QtCore.SIGNAL("toggled(bool)"), self.xmlMeshesListWidget.setEnabled)
         QtCore.QObject.connect(self.shadingGroupCheckBox, QtCore.SIGNAL("toggled(bool)"), self.xmlShadingGroupsListWidget.setEnabled)
         QtCore.QObject.connect(self.shaderAttrCheckBox, QtCore.SIGNAL("toggled(bool)"), self.xmlShaderAttrListWidget.setEnabled)
@@ -347,17 +364,17 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "AS Glm Entity Preset", None, -1))
         self.entityInfogroupBox.setTitle(QtWidgets.QApplication.translate("MainWindow", "Entity Informations", None, -1))
         self.entityIdLabel.setText(QtWidgets.QApplication.translate("MainWindow", "Entity ID:", None, -1))
-        self.entityIdValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "text", None, -1))
+        self.entityIdValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "N/A", None, -1))
         self.gchaFileLabel.setText(QtWidgets.QApplication.translate("MainWindow", "Gcha File:", None, -1))
-        self.gchaFileValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "text", None, -1))
+        self.gchaFileValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "N/A", None, -1))
         self.cacheProxyLabel.setText(QtWidgets.QApplication.translate("MainWindow", "CacheProxy node:", None, -1))
-        self.cacheProxyValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "text", None, -1))
+        self.cacheProxyValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "N/A", None, -1))
         self.mayaSceneLabel.setText(QtWidgets.QApplication.translate("MainWindow", "Maya scene origin:", None, -1))
-        self.mayaSceneValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "text", None, -1))
+        self.mayaSceneValueLabel.setText(QtWidgets.QApplication.translate("MainWindow", "N/A", None, -1))
         self.entityDataGroupBox.setTitle(QtWidgets.QApplication.translate("MainWindow", "Entity Data", None, -1))
         self.meshesLabel.setText(QtWidgets.QApplication.translate("MainWindow", "<b>Meshes:", None, -1))
         self.shadingGroupsLabel.setText(QtWidgets.QApplication.translate("MainWindow", "<b>Shading Groups:", None, -1))
-        self.shaderAttrLabel.setText(QtWidgets.QApplication.translate("MainWindow", "<b>Shaders Attributes:", None, -1))
+        self.shaderAttrLabel.setText(QtWidgets.QApplication.translate("MainWindow", "<b>Shader\'s Attributes:", None, -1))
         self.blindDataLabel.setText(QtWidgets.QApplication.translate("MainWindow", "<b>Blind Data:", None, -1))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.saveTab), QtWidgets.QApplication.translate("MainWindow", "Save Entity preset", None, -1))
         self.importFlagsGroupBox.setTitle(QtWidgets.QApplication.translate("MainWindow", "Data to Import", None, -1))
