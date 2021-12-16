@@ -29,7 +29,7 @@ Preset Data structure:
 Install
 -------
 
-Just drag and drop the install.mel file on to the Maya's viewport. A new shelf button will be created.
+Just drag and drop the install.mel file on to the Maya's viewport. A new shelf button will be created on the active shelve/tab.
 
 Licensing
 --------
