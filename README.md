@@ -29,10 +29,7 @@ Preset Data structure:
 Install
 -------
 
-Copy and unzip the package on your Maya's script folder. 
-Example:
-
-      C:/XXXX/Users/Documents/Maya/20XX/Scripts/
+Just drag and drop the install.mel file on to the Maya's viewport. A new shelf button will be created.
 
 Licensing
 --------
